@@ -21,7 +21,7 @@ public class HelloNormalServiceImpl implements HelloNormalService{
     @Override
     @HystrixCommand(fallbackMethod = "normalHelloFallback")
     public String normalHello() {
-        return restTemplate.getForObject("http://eureka-client-provider/hello",String.class);
+        return restTemplate.getForObject("http://eureka-client-provider-rogers/hello",String.class);
     }
 
     /**

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 并且我们只需要使用接口，并且借助spring mvc的注解，便可以简化调用
  * 使用这个调用的地方在{@link cn.harry.cloud.eurekaclient.controller.HelloController}
  */
-@FeignClient(name = "eureka-client-provider", fallback = HelloFallbackService.class)
+@FeignClient(name = "eureka-client-provider-rogers", fallback = HelloFallbackService.class)
 public interface HelloService {
     @GetMapping("/hello")
     public String hello();

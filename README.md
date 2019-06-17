@@ -2,9 +2,11 @@
 
 
 
-eureka-server作为注册中心
+eureka-server作为注册中心使用**eureka-server**服务
 
-eureka-client一共分为两种：
+eureka-client (application name 是 eureka-client-thor)
+
+一共分为两种：
 
 * 服务消费者
 
@@ -18,6 +20,11 @@ eureka-client一共分为两种：
 
 * 服务提供者
 
-  * eureka-clientA
-  * eureka-clientB
+  * eureka-clientA(application name 是 eureka-client-provider-rogers)
+  * eureka-clientB(application name 是 eureka-client-provider-rogers)
+  * eureka-clientZ(application name 是 eureka-client-provider-stark)
+
+zuul-gateway 使用 **zuul**作为网关。相当于所有client的门面，所有client的名单自然是从eureka那里获取的
+
+启动类上添加注解@EnableZuulProxy
 
